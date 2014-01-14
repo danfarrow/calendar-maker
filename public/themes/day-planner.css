@@ -1,0 +1,50 @@
+    @import url("default.css");
+
+    .day {
+        position: relative;
+        border: none;
+        width: auto;
+        border-bottom: 3px solid #ccc;
+        margin: 1em;
+    }
+
+    .day h1 {
+        text-align: left;
+    }
+
+    .week {
+        position: relative;
+    }
+
+    .weektitle {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        text-align: right;
+        margin: 0; padding: 0;
+    }
+
+    .hour {
+        display: block;
+        height: 6%; padding-top: 0.2em;
+        border-top: 2px solid #333;
+
+        /* Create quarter hour marker lines */
+        background: linear-gradient(
+            to bottom,
+            #fff 0%,
+            #fff 23%,
+            #ddd 24%,
+            #ddd 26%,
+            #fff 27%,
+            #fff 48%,
+            #ddd 49%,
+            #ddd 51%,
+            #fff 52%,
+            #fff 73%,
+            #ddd 74%,
+            #ddd 76%,
+            #fff 77%,
+            #fff 100%
+        ); /* W3C */
+    }

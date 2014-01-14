@@ -1,0 +1,69 @@
+
+    .week {
+        page-break-after: auto;
+        page-break-inside: avoid;
+    }
+
+    .weeknumber::before {
+        content: 'Week ';
+    }
+
+    .day {
+        border-width: 0.5em;
+        border-style: solid;
+        border-color: #000;
+        width: 5em;
+        margin: 1em;
+        position: relative;
+    }
+
+    .day.sat,
+    .day.sun {
+        opacity: 0.5;
+    }
+
+    .day,
+    .day h1,
+    .progress {
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+    }
+
+    .day h1 {
+        text-align: center;
+        padding: 0.25em; margin: 0;
+        line-height: 0.7em;
+    }
+
+    .day .suffix sup {
+        font-weight: normal;
+        font-size:40%
+    }
+
+    .day .dayname,
+    .day .month,
+    .day .year {
+        display:block;
+        font-weight: normal;
+        font-size:60%;
+        font-variant: small-caps;
+    }
+
+    .day .year {
+        font-size:40%;
+    }
+
+    h2 {
+        text-align: center;
+        font-variant: small-caps;
+    }
+
+    .progress {
+        position: absolute;
+        bottom:0;
+        border-bottom: 5px solid #000;
+    }
+
+    .hour {
+        display: none;
+    }
