@@ -84,10 +84,12 @@ function setTheme(themeNameParam) {
 /**
  * Render the specified Handlebars template & CSS theme
  *
+ * @param title Title for the calendar
  * @param templateNameParam Name of Handlebars template to use. Defaults to 'dayTemplate'
  * @param themeName Name of CSS theme to use. Defaults to 'default'
  * @param startDateParam Start date. Defaults to today
  * @param daysDurationParam Duration in days. Default to 28
+ * @return string HTML fragment
  *
  * @todo Enclose in "class"
  * @todo Handle arbitrary number of days enclosed in week objects
@@ -95,6 +97,7 @@ function setTheme(themeNameParam) {
  * @todo Themes should be able to set their defaults
  */
 function render(
+    titleParam,
     templateNameParam,
     themeName,
     startDateParam,
@@ -107,7 +110,7 @@ function render(
         startDate = startDateParam || new Date(),
         day = new Date(startDate),
         daysDuration = daysDurationParam || 1,
-        data = {'weeks': []},
+        data = {'title': titleParam, 'weeks': []},
         weekObj,
         dayObj;
 

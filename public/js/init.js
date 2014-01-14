@@ -13,6 +13,8 @@ function onRenderButtonClick(e) {
     var target = e.currentTarget,
         template = target.getAttribute("data-template"),
         theme = target.getAttribute("data-theme"),
+        titleInput = document.getElementById("title"),
+        title = titleInput.value,
         startDateInput = document.getElementById("startDate"),
         startDate = startDateInput.value,
         dayCount = target.getAttribute("data-dayCount"),
@@ -20,7 +22,7 @@ function onRenderButtonClick(e) {
 
     e.preventDefault();
 
-    holder.innerHTML = render(template, theme, startDate, dayCount);
+    holder.innerHTML = render(title, template, theme, startDate, dayCount);
 }
 
 /**
@@ -30,6 +32,7 @@ function onRenderButtonClick(e) {
  * @param theme string Theme name button will render
  * @param dayCount int Number of days button will render
  * @param targetNodeParam object Node to append to. Defaults to document.body
+ * @return Element
  */
 function makeRenderButton(template, theme, dayCount, targetNodeParam) {
     "use strict";
@@ -63,6 +66,7 @@ function makeRenderButton(template, theme, dayCount, targetNodeParam) {
  * @param value string Value of field
  * @param targetNodeParam object Element to attach input to
  * @param inputTypeParam string Type of input. Defaults to "text"
+ * @return Element
  */
 function makeInputField(
     name,
@@ -97,13 +101,13 @@ function makeInputField(
 }
 
 /**
- * Create date input form-field
+ * Create a date input form-field node
  *
  * @param name string Name of field
  * @param labelText string Text to display in label
  * @param value string Value of field
  * @param targetNodeParam object Element to attach input to
- * @return {*}
+ * @return Element
  */
 function makeDateInputField(name, labelText, value, targetNode) {
     "use strict";
@@ -113,7 +117,9 @@ function makeDateInputField(name, labelText, value, targetNode) {
 }
 
 /**
- * Init
+ * Create and render the calendar preferences form
+ * 
+ * @return null
  */
 function init() {
     "use strict";
@@ -123,6 +129,7 @@ function init() {
 
     // Create buttons holder & buttons
     inputHolder.setAttribute("class", "no-print");
+    makeInputField("title", "Title", "Untitled Calendar", inputHolder);
     makeDateInputField("startDate", "Start date", today, inputHolder);
     makeRenderButton("defaultTemplate", "default", "31", inputHolder);
     makeRenderButton("defaultTemplate", "day-planner", "3", inputHolder);
