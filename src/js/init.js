@@ -37,9 +37,9 @@ function onRenderButtonClick(e) {
 function makeRenderButton(template, theme, dayCount, targetNodeParam) {
     "use strict";
     var btn = document.createElement("button"),
-        br = document.createElement("br"),
-        targetNode = targetNodeParam || document.body;
-
+        targetNode = targetNodeParam || document.body,
+        buttonLabel = String (theme).replace( '-', ' ');
+   
     btn.setAttribute("data-template", template);
     btn.setAttribute("data-theme", theme);
     btn.setAttribute("data-dayCount", dayCount);
@@ -50,11 +50,10 @@ function makeRenderButton(template, theme, dayCount, targetNodeParam) {
 
     // Make text for button
     btn.appendChild(
-        document.createTextNode(theme)
+        document.createTextNode(buttonLabel)
     );
 
     targetNode.appendChild(btn);
-    targetNode.appendChild(br);
     return btn;
 }
 
@@ -125,12 +124,12 @@ function init() {
     "use strict";
     var inputHolder = document.createElement("form"),
         outputHolder = document.createElement("div"),
-        today = new Date().toJSON().slice(0,10);
+        startDate = new Date().toJSON().slice(0,10);
 
     // Create buttons holder & buttons
     inputHolder.setAttribute("class", "no-print");
     makeInputField("title", "Title", "Untitled Calendar", inputHolder);
-    makeDateInputField("startDate", "Start date", today, inputHolder);
+    makeDateInputField("startDate", "Start date", startDate, inputHolder);
     makeRenderButton("defaultTemplate", "default", "31", inputHolder);
     makeRenderButton("defaultTemplate", "day-planner", "3", inputHolder);
     makeRenderButton("defaultTemplate", "slim-days", "42", inputHolder);

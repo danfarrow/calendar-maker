@@ -1,0 +1,25 @@
+body {
+    font-family: sans-serif;
+    font-size: 12px;
+}
+
+@media print {
+	.no-print {
+		display:none;
+	}
+}
+
+label {
+	display: inline-block;
+	width: 10rem;
+}
+
+button {
+	display: inline-block;
+}
+
+@import "themes/day-planner";
+@import "themes/default";
+@import "themes/slim-days";
+@import "themes/slim-weeks";
+@import "themes/working-week";

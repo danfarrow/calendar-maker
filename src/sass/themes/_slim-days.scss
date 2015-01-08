@@ -1,5 +1,4 @@
-    @import url("default.css");
-
+.slim-days {
    .week {
         page-break-after: avoid;
         page-break-inside: avoid;
@@ -54,3 +53,4 @@
     .day .year {
         display: none;
     }
+}

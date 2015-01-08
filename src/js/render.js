@@ -55,28 +55,36 @@ function makeDayObject(day) {
 }
 
 /**
- * Update HREF attribute of the CSS link with title="theme"
+ * Update body tag with class="theme"
  *
  * @param themeNameParam Name of css file in /themes,
  * without trailing ".css". Defaults to 'default'
  */
 function setTheme(themeNameParam) {
     "use strict";
-    var themeName = themeNameParam || 'default',
-        links = document.getElementsByTagName('link'),
-        a,
-        l,
-        elem,
-        rnd;
 
-    for (a = 0, l = links.length; a < l; a++) {
-        elem = links[a];
-        if ('theme' === elem.getAttribute('title')) {
-            rnd = Math.round(Math.random() * 1000);// Cache buster
-            elem.setAttribute('href', 'themes/' + themeName + '.css?' + rnd);
-            break;
-        }
-    }
+    // Remove previously added class
+    document.body.classList.remove(
+        document.body.classList.item(0)
+    );
+
+    document.body.classList.add(themeNameParam);
+    
+    // var themeName = themeNameParam || 'default',
+    //     links = document.getElementsByTagName('link'),
+    //     a,
+    //     l,
+    //     elem,
+    //     rnd;
+
+    // for (a = 0, l = links.length; a < l; a++) {
+    //     elem = links[a];
+    //     if ('theme' === elem.getAttribute('title')) {
+    //         rnd = Math.round(Math.random() * 1000);// Cache buster
+    //         elem.setAttribute('href', 'css/themes/' + themeName + '.css?' + rnd);
+    //         break;
+    //     }
+    // }
 
     return;
 }

@@ -9,6 +9,8 @@ Also a learning project
 Yes indeed, I'm also building / improving my skills in:
 * JavaScript
 * GitHub / git
+* SASS
+* BEM
 * Handlebars
 * ...er, that's it
 

@@ -1,3 +1,0 @@
-function eggs(){
-	alert('hello!');
-}

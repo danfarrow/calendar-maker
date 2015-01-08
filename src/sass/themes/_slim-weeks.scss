@@ -1,0 +1,80 @@
+.slim-weeks{
+
+    .week {
+        position: relative;
+        width: auto;
+        border: none;
+        border-bottom: 2px dotted #ccc;
+        margin: 0;
+        height: 28px;
+        text-align: right;
+    }
+
+   .weekmonth, .weekyear {
+        display: none;
+    }
+
+    .weekmonth {
+        right: 4.25em;
+    }
+
+    .weekyear {
+        right: 1em;
+    }
+
+    .weeknumber {
+        float: left;
+        opacity: 1;
+
+    }
+    .weeknumber::before {
+        content: 'W';
+    }
+
+    .day {
+        display: none;
+    }
+
+    /**
+     * Display day number of first day of each week
+     */
+    .day:first-of-type .dayname, 
+    .day:first-of-type .month, 
+    .day:first-of-type .year {
+        display: inline-block;
+    }
+
+    .day:first-of-type {
+        display: block;
+        width: 100%;
+        border: none;
+        margin: 0;
+    }
+
+    .day:first-of-type .daytitle {
+        opacity: 0.5;
+        text-align: right;
+    }
+
+    .day:first-of-type .daynumber,
+    .day:first-of-type .year {
+        font-weight: normal;
+        font-size: 60%;
+    }
+
+    .suffix {
+        display: none;
+    }
+
+    .progress {
+        bottom: 4px;
+        border-bottom: 2px solid #aaa;
+    }
+
+    /* Align progress border for printed version */
+    @media print {
+        .progress {
+            bottom: 4px;   
+        }
+    }
+}

@@ -1,7 +1,14 @@
+    * {
+        box-sizing: border-box;
+    }
 
     .week {
         page-break-after: auto;
         page-break-inside: avoid;
+    }
+
+    .weektitle {
+        font-variant: small-caps;
     }
 
     .weeknumber::before {
@@ -11,22 +18,18 @@
     .day {
         border-width: 0.5em;
         border-style: solid;
-        border-color: #000;
+        border-color: #aaa;
         width: 5em;
         margin: 1em;
         position: relative;
     }
 
+    /**
+     * Weekend days are knocked back opacity
+     */
     .day.sat,
     .day.sun {
         opacity: 0.5;
-    }
-
-    .day,
-    .day h1,
-    .progress {
-        box-sizing: border-box;
-        -moz-box-sizing: border-box;
     }
 
     .day h1 {
@@ -53,17 +56,13 @@
         font-size:40%;
     }
 
-    h2 {
-        text-align: center;
-        font-variant: small-caps;
-    }
-
     .progress {
         position: absolute;
         bottom:0;
         border-bottom: 5px solid #000;
     }
 
+    /* Hide hours */
     .hour {
         display: none;
     }

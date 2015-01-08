@@ -1,4 +1,4 @@
-    @import url("default.css");
+.working-week {
 
     .day {
         position: relative;
@@ -6,7 +6,7 @@
         width: auto;
         border-bottom: 3px solid #ccc;
         margin: 1em;
-        height: 15%;
+        max-height: 15%;
     }
 
     .day h1 {
@@ -14,7 +14,7 @@
     }
 
     /*
-     * Hide hours, weekend days, year & annual progress
+     * Hide weekend days, year & hours
      */
     .day.sat,
     .day.sun,
@@ -34,3 +34,10 @@
         text-align: right;
         margin: 0; padding: 0;
     }
+
+    .progress {
+        border-bottom: 3px solid #666;
+        bottom: -3px;
+    }
+
+}

@@ -1,4 +1,4 @@
-    @import url("default.css");
+.day-planner {
 
     .day {
         position: relative;
@@ -26,7 +26,7 @@
 
     .hour {
         display: block;
-        height: 6%; padding-top: 0.2em;
+        padding-top: 0.2em;
         border-top: 2px solid #333;
 
         /* Create quarter hour marker lines */
@@ -48,3 +48,22 @@
             #fff 100%
         ); /* W3C */
     }
+
+    .progress {
+        border-bottom: 3px solid #000;
+        bottom: -3px;
+    }
+
+    @media screen {
+        .hour {
+            height: 90px; 
+        }
+    }
+
+    @media print {
+        .hour {
+            height: 12%;
+        }
+    }
+
+}
