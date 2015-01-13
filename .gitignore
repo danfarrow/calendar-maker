@@ -1,6 +1,4 @@
 .idea
 node_modules
-src/sass/.
-src/sass/..
-src/sass/.sass-cache
-*/*.swp
+*.swp
+.sass-cache
