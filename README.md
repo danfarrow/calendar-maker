@@ -18,5 +18,6 @@ Yes indeed, I'm also building / improving my skills in:
 * SASS
 * BEM
 * Handlebars
+* Grunt
 * ...er, that's it
 
