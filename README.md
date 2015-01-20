@@ -21,3 +21,6 @@ Yes indeed, I'm also building / improving my skills in:
 * Grunt
 * ...er, that's it
 
+Note that...
+------------
+This repo is currently in an unstable state as I've been transitioning to Grunt, so it's probably best to check back in a few weeks...
