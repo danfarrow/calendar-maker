@@ -1,0 +1,41 @@
+.full-week {
+
+    .day {
+        position: relative;
+        border: none;
+        width: auto;
+        border-bottom: 3px solid #ccc;
+        margin: 1em;
+        max-height: 15%;
+    }
+
+    .day h1 {
+        text-align: left;
+    }
+
+    /*
+     * Hide year & hours
+     */
+    .yeartitle,
+    .hour {
+        display: none;
+    }
+
+    .week {
+        position: relative;
+    }
+
+    .weektitle {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        text-align: right;
+        margin: 0; padding: 0;
+    }
+
+    .progress {
+        border-bottom: 3px solid #666;
+        bottom: -3px;
+    }
+
+}

@@ -39,7 +39,7 @@ function makeRenderButton(template, theme, dayCount, targetNodeParam) {
     var btn = document.createElement("button"),
         targetNode = targetNodeParam || document.body,
         buttonLabel = String (theme).replace( '-', ' ');
-   
+
     btn.setAttribute("data-template", template);
     btn.setAttribute("data-theme", theme);
     btn.setAttribute("data-dayCount", dayCount);
@@ -117,7 +117,7 @@ function makeDateInputField(name, labelText, value, targetNode) {
 
 /**
  * Create and render the calendar preferences form
- * 
+ *
  * @return null
  */
 function init() {
@@ -134,6 +134,7 @@ function init() {
     makeRenderButton("defaultTemplate", "day-planner", "3", inputHolder);
     makeRenderButton("defaultTemplate", "slim-days", "42", inputHolder);
     makeRenderButton("defaultTemplate", "working-week", "7", inputHolder);
+    makeRenderButton("defaultTemplate", "full-week", "14", inputHolder);
     makeRenderButton("defaultTemplate", "slim-weeks", "224", inputHolder);
     document.body.appendChild(inputHolder);
 
