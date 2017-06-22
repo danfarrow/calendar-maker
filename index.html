@@ -1,1 +1,46 @@
-<h1>I'm testing github pages</h1>
+<html>
+<head>
+    <title>Calendar Maker</title>
+
+    <link rel="stylesheet" type="text/css" href="https://raw.githubusercontent.com/danfarrow/calendar-maker/master/public/css/base.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="css/themes/default.css" title="theme" /> -->
+
+
+    <script type="text/javascript" src="https://raw.githubusercontent.com/danfarrow/calendar-maker/master/public/js/vendor/handlebars-1.0.rc.1.js"></script>
+    <script type="text/javascript" src="https://raw.githubusercontent.com/danfarrow/calendar-maker/master/public/js/lib/extendDate.js"></script>
+    <script type="text/javascript" src="https://raw.githubusercontent.com/danfarrow/calendar-maker/master/public/init.min.js"></script>
+
+</head>
+<body>
+    <script id="defaultTemplate" type="text/x-handlebars-template">
+        <h1 contenteditable>{{title}}</h1>
+        {{#weeks}}
+            <div class="week">
+                <h2 class="weektitle">
+                    <span class="weeknumber">{{weeknumber}}</span>
+                    <span class="weekmonth">{{weekmonth}}</span>
+                    <span class="weekyear">{{weekyear}}</span>
+                </h2>
+                {{#days}}
+                    <div class="day {{dayname}}">
+                        <h1 class="daytitle">
+                            <span class="dayname">{{dayname}}</span>
+                            <span class="daynumber">{{daynumber}}</span><span class="suffix"><sup>{{suffix}}</sup></span>
+                            <span class="month">{{month}}</span>
+                            <span class="year">{{year}}</span>
+                        </h1>
+                        {{#hours}}
+                            <span class="hour">
+                                <span class="hournumber h{{hournumber}}">
+                                    {{hournumber}}
+                                </span>
+                            </span>
+                        {{/hours}}
+                        <div class="progress" style="width: {{percentage}}%;"></div>
+                    </div>        
+                {{/days}}
+            </div>
+        {{/weeks}}
+    </script>
+</body>
+</html>
