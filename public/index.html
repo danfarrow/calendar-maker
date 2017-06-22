@@ -2,13 +2,11 @@
 <head>
     <title>Calendar Maker</title>
 
-    <link rel="stylesheet" type="text/css" href="css/base.css" />
-    <!-- <link rel="stylesheet" type="text/css" href="css/themes/default.css" title="theme" /> -->
+    <link rel="stylesheet" type="text/css" href="/public/css/base.css" />
 
-
-    <script type="text/javascript" src="js/vendor/handlebars-1.0.rc.1.js"></script>
-    <script type="text/javascript" src="js/lib/extendDate.js"></script>
-    <script type="text/javascript" src="js/init.min.js"></script>
+    <script type="text/javascript" src="/public/js/vendor/handlebars-1.0.rc.1.js"></script>
+    <script type="text/javascript" src="/public/js/lib/extendDate.js"></script>
+    <script type="text/javascript" src="/public/init.min.js"></script>
 
 </head>
 <body>
@@ -37,7 +35,7 @@
                             </span>
                         {{/hours}}
                         <div class="progress" style="width: {{percentage}}%;"></div>
-                    </div>        
+                    </div>
                 {{/days}}
             </div>
         {{/weeks}}
